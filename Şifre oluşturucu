@@ -1,0 +1,18 @@
+import random
+import time
+
+print("\033c")
+
+karakterler = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+uzunluk = input("Şifreniz kaç karakter uzun olsun? ")
+
+sifre = ""
+for i in range(int(uzunluk)):
+    sifre += random.choice(karakterler)
+    
+for i in range(3):
+    time.sleep(1)
+    print(".")
+
+print("Şifreniz: ",sifre)
